@@ -1,5 +1,6 @@
 const pg = require('pg');
-const dbUrl = process.env.DATABASE_URL;
+const dbUrl = process.env.DATABASE_URL || 'postgres://haru:kharutaka1993@localhost:5432/data'
+;
 
 function getQuestion(res, req) {
   // const data = {text: req.body.text, complete: false};

@@ -5,9 +5,17 @@ class Code extends Component {
 
   render() {
     const { code } = this.props;
-    return (
-      <p dangerouslySetInnerHTML={{__html: code}} />
-    );
+
+    if (code) {
+      return (
+        <p dangerouslySetInnerHTML={{__html: code}} />
+      );
+    } else {
+      return (
+        <p>Loading...</p>
+      );
+    }
+
   }
 }
 

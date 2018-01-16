@@ -6,9 +6,16 @@ class Selection extends Component {
   render() {
     // const { qnum, questions } = this.props;
     const { question } = this.props;
-    return (
-      <p dangerouslySetInnerHTML={{__html: question}} />
-    );
+
+    if (question) {
+      return (
+        <p dangerouslySetInnerHTML={{__html: question}} />
+      );
+    } else {
+      return (
+        <p>Loading...</p>
+      );
+    }
   }
 }
 
