@@ -14,14 +14,14 @@ export function answer(btnId) {
 export function next(qnum) {
 
   return {
-    'type': NEXT,
+    type: NEXT,
   }
 }
 
 export function back() {
 
   return {
-    'type': BACK,
+    type: BACK,
   }
 }
 
@@ -30,7 +30,7 @@ export function onload() {
   const request = axios.get(url);
 
   return {
-    'type': ONLOAD,
-    'payload': request
+    type: ONLOAD,
+    payload: request
   }
 }
